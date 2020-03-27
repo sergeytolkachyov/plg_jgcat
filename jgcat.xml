@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade">
+  <name>Content - jgCat - JoomGallery Category with description</name>
+  <author>Serhey Tolkachyov</author>
+  <creationDate>14.10.2019</creationDate>
+  <copyright>Copyright (C) 2019. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <authorEmail>info@web-tolk.ru</authorEmail>
+  <authorUrl>web-tolk.ru</authorUrl>
+  <version>1.0</version>
+  <description>PLG_JGCAT_DESC</description>
+  <files>
+    <filename plugin="jgcat">jgcat.php</filename>
+    <filename>index.html</filename>
+	<folder>tmpl</folder>
+	<folder>language</folder>
+  </files>
+  <languages folder="language" client="administrator">
+    <language tag="en-GB">en-GB/en-GB.plg_content_jgcat.ini</language>
+    <language tag="en-GB">en-GB/en-GB.plg_content_jgcat.sys.ini</language>
+    <language tag="ru-RU">ru-RU/ru-RU.plg_content_jgcat.ini</language>
+    <language tag="ru-RU">ru-RU/ru-RU.plg_content_jgcat.sys.ini</language>
+  </languages>
+<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="cleanCatDesc"
+					type="radio"
+					label="PLG_JGCAT_CLEAN_CAT_DESC_OPTION_LABEL"
+					description="PLG_JGCAT_CLEAN_CAT_DESC_OPTION_DESC"
+					class="btn-group btn-group-yesno"
+					default="1"
+					filter="integer"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="tag"
+					type="list"
+					label="PLG_JGCAT_CLEAN_CAT_DESC_TAG_LABEL"
+					default="ol"
+					required="true"
+					showon="cleanCatDesc:1"
+					>
+					<option value="ol">ol-li</option>
+					<option value="ul">ul-li</option>
+					<option value="div">div</option>
+					<option value="span">span</option>
+				</field>
+
+				</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension" name="WebTolkUpdateServer">https://upd.web-tolk.ru/joomla/plg_content_jgcat_update.xml</server>
+	</updateservers>
+</extension>
