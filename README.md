@@ -4,6 +4,9 @@ Joomla content plugin that allows you to insert categories of JoomGallery images
 - Ability to specify itemid menu item for correct sef links
 - Ability to use a fragment of the JoomGallery category description.
 - Ability to create your own plugin output templates.
+
+[Usage example(ru)](https://web-tolk.ru/blog/kak-ispolzovat-plagin-jgcat-dlya-perelinkovki-s-joomgallery.html)
+
 ![Screenshot JGCat plugin](https://web-tolk.ru/images/swjprojects/projects/3/ru-RU/gallery/gVr0yb9DCGD.jpg "Screenshot JGCat plugin")
 Insert a line into the material
 **{jgcat catid=... imgid=... itemid=... tmpl=...}**
